@@ -1,3 +1,4 @@
+@extends('layouts.app')
 @section('title', $title)
 
 @section('content')
@@ -20,4 +21,5 @@
             {!! $users->render() !!}
         </div>
     </div>
+    1
 @stop
