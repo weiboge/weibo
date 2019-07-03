@@ -10,4 +10,5 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit','index','destroy']]);
+    Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
 });
