@@ -11,4 +11,6 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit','index','destroy']]);
     Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
+    Route::get('/users/{user}/followings', 'UsersController@followings')->name('users.followings');
+    Route::get('/users/{user}/followers', 'UsersController@followers')->name('users.followers');
 });
